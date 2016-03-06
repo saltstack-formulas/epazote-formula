@@ -1,0 +1,21 @@
+config:
+    smtp:
+        username: the-username
+        password: the-password
+        server: smtp-relay.gmail.com
+        port: 587
+        headers:
+            from: monitor@the-team
+            to: to@the-team
+            subject: >
+                [_name_, _because_]
+    scan:
+        paths:
+            - /arena
+        minutes: 30
+
+services:
+# see http://about.epazote.io for more details
+#    google:
+#       url: http://google.com
+#       follow: true

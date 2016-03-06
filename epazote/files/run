@@ -1,0 +1,6 @@
+{%- from "epazote/map.jinja" import conf with context -%}
+#!/bin/sh
+
+exec 2>&1
+
+exec {{ conf.get('bin', 'epazote') }} -f {{ conf.get('etc-path', '/usr/local/etc') }}/epazote.yml
