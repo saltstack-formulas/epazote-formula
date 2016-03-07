@@ -15,6 +15,7 @@ config:
         minutes: 30
 
 services:
-    google:
-        url: http://google.com
-        follow: true
+# see http://about.epazote.io for more details
+#    google:
+#       url: http://google.com
+#       follow: true
