@@ -1,5 +1,4 @@
-epazote_conf:
-  - default
+epazote_conf: default
 
 # Defaults can be overwritten, see epazote/map.jinja for default values
 # epazote:
