@@ -33,7 +33,7 @@ epazote:
     - name: {{ conf.get('etc-path', '/usr/local/etc') }}/epazote.yml
     - template: jinja
     - makedirs: True
-    - source: salt://epazote/files/{{ pillar.get('epazote_conf', ['generic'])[0] }}.yml
+    - source: salt://epazote/files/{{ pillar.get('epazote_conf', 'generic') }}.yml
 
 {{ conf.get('SVDIR', '/service') }}/epazote:
   file.symlink:
