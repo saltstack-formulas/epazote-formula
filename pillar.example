@@ -3,5 +3,5 @@ epazote_conf: default
 # Defaults can be overwritten, see epazote/map.jinja for default values
 # epazote:
 #   lookup:
-#     SVDIR: '/var/service',
-#     sv-dir: '/etc/sv/epazote',
+#     SVDIR: '/var/service'
+#     sv-dir: '/etc/sv/epazote'
