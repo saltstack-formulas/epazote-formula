@@ -2,7 +2,8 @@
 
 fetch_epazote:
 {% if grains['os_family'] == 'FreeBSD' %}
-  pkg.installed
+  pkg.installed:
+    - name: epazote
 {% elif grains['os_family'] == 'Debian' %}
   cmd.run:
     - name: {{ conf.name }}
