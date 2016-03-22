@@ -1,17 +1,15 @@
 {% set conf = salt['grains.filter_by']({
     'Debian':  {
-        'name': 'mkdir /tmp/epazote; curl -L https://dl.bintray.com/nbari/epazote/epazote_1.5.0_linux_amd64.tar.gz | tar -xz -C /tmp/epazote --strip-components=1 &&  mv /tmp/epazote/epazote /usr/sbin/epazote && chmod +x /usr/sbin/epazote && rm -rf /tmp/epazote',
-        'unless': '/usr/sbin/epazote',
+        'name': 'mkdir /tmp/epazote; curl -L https://dl.bintray.com/nbari/epazote/epazote_1.5.2_linux_amd64.tar.gz | tar -xz -C /tmp/epazote --strip-components=1 &&  mv /tmp/epazote/epazote /usr/bin/epazote && chmod +x /usr/bin/epazote && rm -rf /tmp/epazote',
+        'unless': '/usr/bin/epazote',
         'etc-path': '/etc',
-        'bin': '/usr/sbin/epazote',
+        'bin': '/usr/bin/epazote',
         'SVDIR': '/service',
         'sv-dir': '/arena/epazote',
     },
     'FreeBSD': {
-        'name': 'mkdir /tmp/epazote; curl -L https://dl.bintray.com/nbari/epazote/epazote_1.5.0_freebsd_amd64.zip | tar -xf - -C /tmp/epazote --strip-components=1 &&  mv /tmp/epazote/epazote /usr/local/sbin/epazote && chmod +x /usr/local/sbin/epazote && rm -rf /tmp/epazote',
-        'unless': '/usr/local/sbin/epazote',
         'etc-path': '/usr/local/etc',
-        'bin': '/usr/local/sbin/epazote',
+        'bin': '/usr/local/bin/epazote',
         'SVDIR': '/service',
         'sv-dir': '/arena/epazote',
     },
