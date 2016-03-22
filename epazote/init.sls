@@ -1,10 +1,9 @@
 {% from "epazote/map.jinja" import conf with context %}
 
+fetch_epazote:
 {% if grains['os_family'] == 'FreeBSD' %}
-epazote:
   pkg.installed
 {% elif grains['os_family'] == 'Debian' %}
-fetch_epazote:
   cmd.run:
     - name: {{ conf.name }}
     - unless:
