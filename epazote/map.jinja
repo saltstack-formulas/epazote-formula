@@ -1,6 +1,6 @@
 {% set conf = salt['grains.filter_by']({
     'Debian':  {
-        'name': 'mkdir /tmp/epazote; curl -L https://dl.bintray.com/nbari/epazote/epazote_2.0.0_linux_amd64.tar.gz | tar -xz -C /tmp/epazote --strip-components=1 &&  mv /tmp/epazote/epazote /usr/bin/epazote && chmod +x /usr/bin/epazote && rm -rf /tmp/epazote',
+        'name': 'mkdir /tmp/epazote; curl -L https://dl.bintray.com/nbari/epazote/epazote_2.1.0_linux_amd64.tar.gz | tar -xz -C /tmp/epazote --strip-components=1 &&  mv /tmp/epazote/epazote /usr/bin/epazote && chmod +x /usr/bin/epazote && rm -rf /tmp/epazote',
         'unless': '/usr/bin/epazote',
         'etc-path': '/etc',
         'bin': '/usr/bin/epazote',
